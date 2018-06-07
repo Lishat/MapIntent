@@ -1,41 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/text_margin">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a700ff"
+    android:layout_marginTop = "@dimen/text_margin">
 
     <EditText
         android:id="@+id/from"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:background="@drawable/edit_btn"
         android:layout_marginLeft="21dp"
         android:layout_marginStart="21dp"
         android:layout_marginTop="21dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/from" />
+        android:hint="@string/from"
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/to"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/to"
-        android:layout_below="@+id/from"
+        android:layout_height="40dp"
         android:layout_alignLeft="@+id/from"
-        android:layout_alignStart="@+id/from" />
+        android:layout_alignStart="@+id/from"
+        android:layout_below="@+id/from"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/edit_btn"
+        android:ems="10"
+        android:hint="@string/to"
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/go"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/go"
         android:layout_alignBottom="@+id/to"
-        android:layout_toRightOf="@+id/to"
-        android:layout_toEndOf="@+id/to"
         android:layout_marginLeft="27dp"
-        android:layout_marginStart="27dp" />
+        android:layout_marginStart="27dp"
+        android:layout_toEndOf="@+id/to"
+        android:layout_toRightOf="@+id/to"
+        android:background="@drawable/border_btn"
+        android:text="@string/go" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:text="Fav"
+        tools:background="@android:drawable/btn_star_big_on"
+        tools:backgroundTint="@android:color/holo_green_light"
+        android:layout_below="@+id/to"
+        android:layout_toLeftOf="@+id/button3"
+        android:layout_toStartOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_green_light"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="History"
+        tools:background="@android:drawable/ic_menu_today" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button3"
+        android:layout_alignBottom="@+id/button3"
+        android:layout_toEndOf="@+id/button3"
+        android:layout_toRightOf="@+id/button3"
+        android:text="Search"
+        tools:background="@android:drawable/ic_search_category_default"
+        tools:backgroundTint="@android:color/white" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignEnd="@+id/go"
+        android:layout_alignLeft="@+id/to"
+        android:layout_alignRight="@+id/go"
+        android:layout_alignStart="@+id/to"
+        android:layout_below="@+id/button2"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="52dp"
+        android:text="This is the display section"
+        android:textColor="@android:color/white"
+        tools:background="@android:color/black" />
 </RelativeLayout>
